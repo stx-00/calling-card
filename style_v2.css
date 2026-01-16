@@ -1,15 +1,17 @@
-/* ---------- ALLGEMEINE STYLES ----------- */
+@font-face {
+  font-family: "Avara-Bold";
+  src: url("fonts/Avara-Bold.woff2") format("woff2");
+}
+
+body {
+  background-color: gainsboro;
+  font-size: 15px;
+}
 
 img {
   max-width: 100%;
   height: auto;
 }
-
-body {
-  background-color: blanchedalmond;
-}
-
-/* ---------- MEIN RASTER ------------- */
 
 .grid-container {
   display: grid;
@@ -17,22 +19,22 @@ body {
   gap: 15px;
   grid-template-columns: 3fr 1fr 2fr 1fr 1fr 1fr;
   grid-template-areas:
-    "name name name name bio bio"
-    "text-1 image-1 image-1 image-1 image-1 image-1"
+    "image-2 image-2 image-2 . bio bio"
     "image-2 image-2 image-2 text-2 . ."
+    "text-1 image-1 image-1 image-1 image-1 image-1"
+    "name name name name name name"
     ". . image-3 image-3 image-3 text-3";
 }
 
 .name {
   grid-area: name;
-  /* background-color: blueviolet; */
 }
 
 .name h1 {
-  /* color: red; */
-  font-family: "Arial", Arial, Helvetica, sans-serif;
+  color: red;
+  font-family: "Avara-Bold", serif;
   font-weight: normal;
-  font-size: 200px;
+  font-size: 8rem;
   margin: 0;
 }
 
