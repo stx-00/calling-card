@@ -1,0 +1,48 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  padding: 15px 15px 15px 15px;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "name name name bio"
+    "image-1 image-1 image-1 text-1"
+    "image-2 image-2 image-2 text-2"
+    "image-3 image-3 image-3 text-3";
+}
+
+.name {
+  grid-area: name;
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.image-1 {
+  grid-area: image-1;
+}
+
+.image-2 {
+  grid-area: image-2;
+}
+
+.image-3 {
+  grid-area: image-3;
+}
+
+.text-1 {
+  grid-area: text-1;
+}
+
+.text-2 {
+  grid-area: text-2;
+}
+
+.text-3 {
+  grid-area: text-3;
+}
