@@ -3,6 +3,7 @@
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 body {
@@ -26,6 +27,9 @@ body {
 .name {
   grid-area: name;
   /* background-color: blueviolet; */
+  position: relative;
+  top: 150px;
+  z-index: 1;
 }
 
 .name h1 {
@@ -56,10 +60,40 @@ body {
 
 .image-1 {
   grid-area: image-1;
+  position: relative;
+}
+
+.image-1 img {
+  transition: opacity 0.3s ease;
+}
+
+.image-1 .b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.image-1:hover .a {
+  opacity: 0;
+}
+
+.image-1:hover .b {
+  opacity: 1;
 }
 
 .image-2 {
   grid-area: image-2;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  font-size: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
 .image-3 {

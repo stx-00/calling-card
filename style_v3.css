@@ -11,11 +11,12 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .grid-container {
   display: grid;
-  padding: 15px 15px 15px 15px;
+  padding: 150px 450px 250px 15px;
   gap: 15px;
   grid-template-columns: 3fr 1fr 2fr 1fr 1fr 1fr;
   grid-template-areas:
@@ -28,9 +29,6 @@ img {
 
 .name {
   grid-area: name;
-  position: absolute;
-  top: 50px;
-  left: 250px;
 }
 
 .name h1 {
@@ -45,7 +43,7 @@ img {
   color: blue;
   font-style: italic;
   font-weight: bold;
-  transition: color 2s linear;
+  transition: color 1s ease;
 }
 
 .bio {
@@ -58,25 +56,30 @@ img {
   line-height: 1.5;
   margin: 0;
   text-align: justify;
-  opacity: 0.2;
-  transition: opacity 0.5s ease;
-  transform: rotate(90deg);
-}
-
-.bio p:hover {
-  opacity: 1;
 }
 
 .image-1 {
   grid-area: image-1;
+  position: relative;
 }
 
 .image-1 img {
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.image-1 img:hover {
-  transform: scale(1.5);
+.image-1 .b {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.image-1:hover .a {
+  opacity: 0;
+}
+
+.image-1:hover .b {
+  opacity: 1;
 }
 
 .image-2 {
@@ -84,12 +87,11 @@ img {
 }
 
 .image-2 img {
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  transition: box-shadow 0.3 ease;
+  transition: transform 0.3s ease;
 }
 
 .image-2 img:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 
 .image-3 {
@@ -101,6 +103,7 @@ img {
 }
 
 .image-3 img:hover {
+  transform: rotate(5deg); /* dreht sich 5 Grad */
 }
 
 .text-1 {
