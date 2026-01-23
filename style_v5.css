@@ -4,9 +4,9 @@
 }
 
 body {
-  background-image: url("data/GFSmithColorplan_Adriatic_100gsm.jpg");
-  background-size: cover;
-  background-position: center;
+  /* background-image: url("data/GFSmithColorplan_Adriatic_100gsm.jpg"); */
+  /* background-size: cover; */
+  /* background-position: center; */
   font-size: 15px;
 }
 
@@ -21,6 +21,7 @@ img {
   gap: 15px;
   grid-template-columns: 3fr 1fr 2fr 1fr 1fr 1fr;
   grid-template-areas:
+    ". . info info info ."
     ". . . image-1 image-1 ."
     "image-2 image-2 . . . ."
     ". . image-3 image-3 . .";
@@ -78,4 +79,8 @@ img {
 .image-2:hover ~ .name,
 .image-3:hover ~ .name {
   filter: blur(5px); /* Adjust the pixel value for more/less blur */
+}
+
+.info {
+  grid-area: info;
 }

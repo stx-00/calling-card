@@ -1,0 +1,97 @@
+/* ---------- ALLGEMEINE STYLES ----------- */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: blanchedalmond;
+  margin: 0;
+}
+
+/* ---------- MEIN RASTER ------------- */
+
+.grid-container {
+  display: grid;
+  padding: 0px 15px 15px 15px;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header header header"
+    "image-1 image-1 image-2 image-2 image-3 image-3"
+    "text-1 text-1 text-2 text-2 text-3 text-3";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  background-color: orange;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -15px;
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+  padding-top: 15px; /* Add this line to maintain spacing */
+}
+
+.name {
+  /* background-color: blueviolet; */
+  grid-column: 1 / 5;
+}
+
+.name h1 {
+  /* color: red; */
+  font-family: "Arial", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 100px;
+  margin: 0;
+}
+
+.bio {
+  /* background-color: rgb(145, 222, 145); */
+  grid-column: 5 / -1;
+  display: grid;
+  place-items: center;
+}
+
+.bio p {
+  color: green;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: justify;
+}
+
+.image-1 {
+  grid-area: image-1;
+}
+
+.image-2 {
+  grid-area: image-2;
+}
+
+.image-3 {
+  grid-area: image-3;
+}
+
+.text-1 {
+  grid-area: text-1;
+}
+
+.text-2 {
+  grid-area: text-2;
+}
+
+.text-3 {
+  grid-area: text-3;
+}
+
+.text-1 p,
+.text-2 p,
+.text-3 p {
+  margin: 0;
+}
