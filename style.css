@@ -11,6 +11,19 @@ body {
   margin: 0;
 }
 
+a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #0056b3;
+}
+
 /* ---------- MEIN RASTER ------------- */
 
 .grid-container {
